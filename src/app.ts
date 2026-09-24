@@ -2,6 +2,8 @@ import express from "express";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import morgan from "morgan";
+import authRoute from "./route/auth.route.js";
+import { globalErrorHandler } from "./controller/error.controller.js";
 
 export const app = express();
 
@@ -18,3 +20,18 @@ app.use(express.json({
 }))
 
 app.use(morgan('dev'))
+
+app.use('/api/v1/auth/', authRoute)
+
+
+app.all('/*splat', (req, res, next) => {
+    const error: any = new Error(`No route found for ${req.method} ${req.url}`);
+    error.statusCode = 404;
+    error.success = false;
+    next(error);
+
+});
+
+app.use(globalErrorHandler)
+
+
