@@ -2,9 +2,18 @@ import type { Request, Response } from 'express'
 import User from '../model/user.model.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
+import crypto from 'crypto'
 
 export const signup = async (req: Request, res: Response) => {
     try {
+
+        if (!req.body.name || !req.body.email || !req.body.password) {
+            res.status(400).json({
+                success: false,
+                message: 'Name, email and password are required'
+            })
+            return
+        }
 
         const hashedPassword = await bcrypt.hash(req.body.password, 12)
 
@@ -34,11 +43,9 @@ export const signup = async (req: Request, res: Response) => {
 
     } catch (error) {
 
-        const err = error as Error
-
         res.status(500).json({
             success: false,
-            message: err.message
+            message: "Internal server error"
         })
     }
 
@@ -46,6 +53,14 @@ export const signup = async (req: Request, res: Response) => {
 
 export const login = async (req: Request, res: Response) => {
     try {
+
+        if (!req.body.email || !req.body.password) {
+            res.status(400).json({
+                success: false,
+                message: 'Email and password are required'
+            })
+            return
+        }
 
         const user = await User.findOne({ email: req.body.email }).select("+password")
 
@@ -57,13 +72,14 @@ export const login = async (req: Request, res: Response) => {
             return
         }
 
-        const comparePassword = await bcrypt.compare(req.body.password,user.password)
+        const comparePassword = await bcrypt.compare(req.body.password, user.password)
 
         if (!comparePassword) {
             res.status(200).json({
-                success:false,
-                messsage:"Invalid password"
+                success: false,
+                messsage: "Invalid password"
             })
+            return
         }
 
         const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY as string, {
@@ -85,12 +101,115 @@ export const login = async (req: Request, res: Response) => {
 
     } catch (error) {
 
-        const err = error as Error
-
         res.status(500).json({
             success: false,
-            message: err.message
+            message: "Internal server error"
         })
     }
 
+}
+
+export const forgetPassword = async (req: Request, res: Response) => {
+
+    try {
+        if (!req.body.email) {
+            res.status(400).json({
+                success: false,
+                message: 'Email is required'
+            })
+            return
+        }
+
+        const user = await User.findOne({ email: req.body.email })
+        if (!user) {
+            res.status(404).json({
+                success: false,
+                message: 'No user found with this email'
+            })
+            return
+        }
+
+        const rawToken = crypto.randomBytes(32).toString('hex');
+        const hashedToken = crypto.createHash('sha256').update(rawToken).digest('hex')
+
+        const tokenExpiry = new Date(Date.now() + 3600 * 1000)
+
+        await User.findOneAndUpdate({ email: req.body.email }, {
+            resetPasswordToken: hashedToken,
+            resetPasswordExpires: tokenExpiry
+        }, { new: true })
+
+
+        // send email
+
+        res.status(200).json({
+            success: true,
+            data: {
+                resetToken: rawToken
+            }
+        })
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
+    }
+
+}
+
+export const resetPassword = async (req: Request, res: Response) => {
+    try {
+
+        const resetPasswordToken = req.params.resetPasswordToken as string
+
+        if (!resetPasswordToken || !req.body.password) {
+            res.status(400).json({
+                success: false,
+                message: 'Reset token and new password are required'
+            })
+            return
+        }
+
+        const hashedToken = crypto.createHash('sha256').update(resetPasswordToken).digest('hex');
+
+        const user = await User.findOne({ resetPasswordToken: hashedToken })
+        if (!user) {
+            res.status(404).json({
+                success: false,
+                message: 'No user found with this reset token'
+            })
+            return
+        }
+
+        if (user.resetPasswordExpires!.getTime() < Date.now()) {
+            res.status(401).json({
+                success: false,
+                message: 'Reset token expired'
+            })
+            return
+        }
+
+        const hashedPassword = await bcrypt.hash(req.body.password, 12)
+
+        await User.findByIdAndUpdate(user._id, {
+            password: hashedPassword,
+            resetPasswordToken: null,
+            resetPasswordExpires: null
+        })
+
+        res.status(200).json({
+            success: true,
+            data: null
+        })
+
+    }
+    catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
+    }
 }
