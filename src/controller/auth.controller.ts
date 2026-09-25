@@ -1,8 +1,50 @@
-import type { Request, Response } from 'express'
+import type { Request, Response, NextFunction } from 'express'
 import User from '../model/user.model.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import crypto from 'crypto'
+
+export const protectedRoute = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const token = req.cookies.token as string
+
+        if (!token) {
+            res.status(401).json({
+                success: false,
+                message: 'Token is required'
+            })
+            return
+        }
+
+        const decodedToken = jwt.verify(token, process.env.SECRET_KEY as string) as { id: string }
+
+        const user = await User.findById(decodedToken.id)
+
+        if (!user) {
+            res.status(401).json({
+                success: false,
+                message: 'Token is invalid'
+            })
+            return
+        }
+
+        (req as any).user = user
+
+        next()
+
+    } catch (error) {
+
+        if (error instanceof jwt.TokenExpiredError) {
+            res.status(401).json({ success: false, message: 'Token expired' })
+            return
+        }
+
+        res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
+    }
+}
 
 export const signup = async (req: Request, res: Response) => {
     try {
@@ -25,7 +67,7 @@ export const signup = async (req: Request, res: Response) => {
         })
 
         const token = jwt.sign({ id: newUser._id }, process.env.SECRET_KEY as string, {
-            expiresIn: 15 * 60 * 1000
+            expiresIn: 3600
         })
 
         const refreshToken = jwt.sign({ id: newUser._id }, process.env.REFRESH_TOKEN as string, {
@@ -300,7 +342,7 @@ export const refreshToken = async (req: Request, res: Response) => {
 
     }
     catch (error) {
-        
+
         res.status(500).json({
             success: false,
             message: "Internal server error"

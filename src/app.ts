@@ -5,6 +5,7 @@ import morgan from "morgan";
 import authRoute from "./route/auth.route.js";
 import { globalErrorHandler } from "./controller/error.controller.js";
 import cookieParser from "cookie-parser";
+import userRoute from "./route/user.route.js";
 
 export const app = express();
 
@@ -25,6 +26,7 @@ app.use(cookieParser())
 app.use(morgan('dev'))
 
 app.use('/api/v1/auth/', authRoute)
+app.use('/api/v1/user/', userRoute)
 
 
 app.all('/*splat', (req, res, next) => {

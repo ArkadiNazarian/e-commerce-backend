@@ -1,5 +1,19 @@
-import mongoose from 'mongoose'
+import mongoose, { type HydratedDocument } from 'mongoose'
 import validator from 'validator'
+
+export interface IUser {
+    name: string;
+    email: string;
+    password: string;
+    role: 'admin' | 'user';
+    phone?: string | null;
+    passwordChangedAt?: Date | null;
+    resetPasswordToken?: string | null;
+    resetPasswordExpires?: Date | null;
+    refreshToken: string;
+}
+
+export type UserDocument = HydratedDocument<IUser>;
 
 const userSchema = new mongoose.Schema(
     {
