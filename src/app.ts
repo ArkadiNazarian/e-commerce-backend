@@ -4,6 +4,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import authRoute from "./route/auth.route.js";
 import { globalErrorHandler } from "./controller/error.controller.js";
+import cookieParser from "cookie-parser";
 
 export const app = express();
 
@@ -18,6 +19,8 @@ app.use(rateLimit({
 app.use(express.json({
     limit: "50kb"
 }))
+
+app.use(cookieParser())
 
 app.use(morgan('dev'))
 

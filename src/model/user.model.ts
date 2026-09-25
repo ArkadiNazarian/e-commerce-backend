@@ -32,15 +32,20 @@ const userSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
-        passwordChangedAt:{
+        passwordChangedAt: {
             type: Date,
         },
-        resetPasswordToken:{
+        resetPasswordToken: {
             type: String,
         },
-        resetPasswordExpires:{
+        resetPasswordExpires: {
             type: Date,
-        }
+        },
+        refreshToken: {
+            required: true,
+            type: String,
+            select: false
+        },
 
     },
     {

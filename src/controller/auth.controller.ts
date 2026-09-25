@@ -17,18 +17,35 @@ export const signup = async (req: Request, res: Response) => {
 
         const hashedPassword = await bcrypt.hash(req.body.password, 12)
 
-        const newUser = await User.create({
+        const newUser = await new User({
             name: req.body.name,
             email: req.body.email,
             password: hashedPassword,
-            role: req.body.role
+            role: req.body.role,
         })
 
         const token = jwt.sign({ id: newUser._id }, process.env.SECRET_KEY as string, {
-            expiresIn: 3600
+            expiresIn: 15 * 60 * 1000
         })
 
+        const refreshToken = jwt.sign({ id: newUser._id }, process.env.REFRESH_TOKEN as string, {
+            expiresIn: 7 * 24 * 60 * 60 * 1000
+        })
+
+        const hashedRefreshToken = crypto.createHash('sha256').update(refreshToken).digest('hex')
+
+
+        newUser.refreshToken = hashedRefreshToken
+
+        await newUser.save()
+
         res.cookie('token', token, {
+            httpOnly: true,
+            // secure: true,
+            sameSite: 'strict'
+        })
+
+        res.cookie('refreshToken', refreshToken, {
             httpOnly: true,
             // secure: true,
             sameSite: 'strict'
@@ -207,6 +224,83 @@ export const resetPassword = async (req: Request, res: Response) => {
 
     }
     catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
+    }
+}
+
+export const refreshToken = async (req: Request, res: Response) => {
+    try {
+
+        const refreshToken = req.cookies.refreshToken as string
+
+        if (!refreshToken) {
+            res.status(401).json({
+                success: false,
+                message: 'Refresh token is required'
+            })
+            return
+        }
+
+        const refrehToken = jwt.verify(refreshToken, process.env.REFRESH_TOKEN as string)
+
+        if (!refrehToken) {
+            res.status(401).json({
+                success: false,
+                message: 'Refresh token is invalid'
+            })
+            return
+        }
+
+
+        const hashedRefreshToken = crypto.createHash('sha256').update(refreshToken).digest('hex');
+
+        const user = await User.findOne({ refreshToken: hashedRefreshToken })
+        if (!user) {
+            res.status(401).json({
+                success: false,
+                message: 'Refresh token is invalid'
+            })
+            return
+        }
+
+        const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY as string, {
+            expiresIn: 15 * 60 * 1000
+        })
+
+        const newRefreshToken = jwt.sign({ id: user._id }, process.env.REFRESH_TOKEN as string, {
+            expiresIn: 7 * 24 * 60 * 60 * 1000
+        })
+
+        const newHashedRefreshToken = crypto.createHash('sha256').update(newRefreshToken).digest('hex')
+
+        await User.findByIdAndUpdate(user._id, {
+            refreshToken: newHashedRefreshToken
+        })
+
+
+        res.cookie('token', token, {
+            httpOnly: true,
+            // secure: true,
+            sameSite: 'strict'
+        })
+
+        res.cookie('refreshToken', newRefreshToken, {
+            httpOnly: true,
+            // secure: true,
+            sameSite: 'strict'
+        })
+
+        res.status(200).json({
+            success: true,
+            token,
+        })
+
+    }
+    catch (error) {
+        
         res.status(500).json({
             success: false,
             message: "Internal server error"
