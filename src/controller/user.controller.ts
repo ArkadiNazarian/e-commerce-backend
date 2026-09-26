@@ -66,11 +66,11 @@ export const updateUserInfo = async (req: Request, res: Response) => {
             });
         }
 
-        if(req.body.role){
+        if (req.body.role) {
             delete req.body.role
         }
 
-        if(req.body.password){
+        if (req.body.password) {
             delete req.body.password
         }
 
@@ -99,3 +99,22 @@ export const updateUserInfo = async (req: Request, res: Response) => {
         });
     }
 }
+
+export const getAllUsers = async (req: Request, res: Response) => {
+    try {
+
+        const { page = 1, limit = 10 } = req.query;
+
+        const users = await User.find().skip((Number(page)- 1) * Number(limit)).limit(Number(limit)).sort({ createdAt: -1 });
+
+        return res.status(200).json({
+            success: true,
+            data: users,
+        });
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: 'Internal server error',
+        });
+    }
+};

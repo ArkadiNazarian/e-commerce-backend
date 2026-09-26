@@ -46,6 +46,39 @@ export const protectedRoute = async (req: Request, res: Response, next: NextFunc
     }
 }
 
+export const adminProtectedRoute = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        const user = req.user
+
+        if (!user) {
+            res.status(401).json({
+                success: false,
+                message: 'Token is invalid'
+            })
+            return
+        }
+
+        if(user.role !== 'admin') {
+            res.status(401).json({
+                success: false,
+                message: 'You are not authorized to access this route',
+            })
+            return
+        }
+
+        (req as any).user = user
+
+        next()
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
+    }
+}
+
 export const signup = async (req: Request, res: Response) => {
     try {
 
