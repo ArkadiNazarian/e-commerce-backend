@@ -6,6 +6,7 @@ import authRoute from "./route/auth.route.js";
 import { globalErrorHandler } from "./controller/error.controller.js";
 import cookieParser from "cookie-parser";
 import userRoute from "./route/user.route.js";
+import addressRoute from "./route/address.route.js";
 
 export const app = express();
 
@@ -27,6 +28,7 @@ app.use(morgan('dev'))
 
 app.use('/api/v1/auth/', authRoute)
 app.use('/api/v1/user/', userRoute)
+app.use('/api/v1/address/', addressRoute)
 
 
 app.all('/*splat', (req, res, next) => {

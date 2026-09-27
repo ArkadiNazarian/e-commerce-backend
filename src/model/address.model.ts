@@ -56,10 +56,14 @@ const addressSchema = new mongoose.Schema(
             required: [true, "Line1 is required"],
             trim: true
         },
-        lin2: {
+        line2: {
             type: String,
             trim: true
         },
+        is_default: {
+            type: Boolean,
+            default: false
+        }
     },
     {
         timestamps: true,
