@@ -184,7 +184,7 @@ export const login = async (req: Request, res: Response) => {
             sameSite: 'strict'
         })
 
-        res.status(201).json({
+        res.status(200).json({
             success: true,
             token,
             data: user
