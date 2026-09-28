@@ -1,6 +1,7 @@
 import type { Request, Response } from 'express'
 import Category from '../model/category.model.js'
 import { handleDbError } from '../utils/dbError.js'
+import Product from '../model/product.model.js'
 
 export const addCategory = async (req: Request, res: Response) => {
     try {
@@ -105,11 +106,52 @@ export const deleteCategoryById = async (req: Request, res: Response) => {
                 message: 'Category not found'
             })
         }
-        
+
         res.status(200).json({
             success: true,
             data: category
         })
+    } catch (error) {
+        handleDbError(error, res)
+    }
+}
+
+export const getCategoryProducts = async (req: Request, res: Response) => {
+    try {
+
+        const categoryId = req.params.categoryId as string
+        const { page = 1, limit = 10, sort, minPrice, maxPrice, ...queries } = req.query
+
+        if (minPrice) {
+            queries.price = { $gte: minPrice }
+        }
+
+        if (maxPrice) {
+            queries.price = { $lte: maxPrice }
+        }
+
+        let sortOptions: string | undefined
+
+        if (sort) {
+            const sortBy = (sort as string).split(',').join(' ')
+            sortOptions = sortBy
+        }
+
+        const products = await Product.find({ category: categoryId, ...queries }).sort(sortOptions).skip((Number(page) - 1) * Number(limit)).limit(Number(limit))
+
+        if (!products) {
+            return res.status(404).json({
+                success: false,
+                message: 'Category not found'
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            length: products.length,
+            data: products
+        })
+        
     } catch (error) {
         handleDbError(error, res)
     }

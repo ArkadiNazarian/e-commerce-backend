@@ -8,7 +8,7 @@
             "https://example.com/images/headphones-1.jpg",
             "https://example.com/images/headphones-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 150,
         "sku": "WBH-2024-BLK",
         "rating_avg": 4.5,
@@ -23,28 +23,6 @@
         "brand": "SoundMax"
     },
     {
-        "name": "Smart Fitness Watch",
-        "slug": "smart-fitness-watch",
-        "description": "Track heart rate, sleep, and workouts with a 7-day battery life.",
-        "price": 149.99,
-        "images": [
-            "https://example.com/images/fitness-watch-1.jpg",
-            "https://example.com/images/fitness-watch-2.jpg"
-        ],
-        "category": "Wearables",
-        "stock": 200,
-        "sku": "SFW-2024-SLV",
-        "rating_avg": 4.3,
-        "rating_count": 210,
-        "is_active": true,
-        "tags": [
-            "wearable",
-            "fitness",
-            "smartwatch"
-        ],
-        "brand": "FitTech"
-    },
-    {
         "name": "4K Ultra HD Smart TV",
         "slug": "4k-ultra-hd-smart-tv",
         "description": "55-inch 4K Smart TV with HDR10+ and built-in streaming apps.",
@@ -53,7 +31,7 @@
             "https://example.com/images/tv-1.jpg",
             "https://example.com/images/tv-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 45,
         "sku": "TV4K-55-2024",
         "rating_avg": 4.7,
@@ -68,75 +46,6 @@
         "brand": "VisionPlus"
     },
     {
-        "name": "Gaming Mechanical Keyboard",
-        "slug": "gaming-mechanical-keyboard",
-        "description": "RGB backlit mechanical keyboard with blue switches and anti-ghosting.",
-        "price": 89.99,
-        "images": [
-            "https://example.com/images/keyboard-1.jpg",
-            "https://example.com/images/keyboard-2.jpg"
-        ],
-        "category": "Gaming",
-        "stock": 300,
-        "sku": "GMK-RGB-BLU",
-        "rating_avg": 4.6,
-        "rating_count": 450,
-        "is_active": true,
-        "tags": [
-            "gaming",
-            "keyboard",
-            "mechanical",
-            "rgb"
-        ],
-        "brand": "HyperKey"
-    },
-    {
-        "name": "Ergonomic Office Chair",
-        "slug": "ergonomic-office-chair",
-        "description": "Adjustable lumbar support and breathable mesh for all-day comfort.",
-        "price": 249.99,
-        "images": [
-            "https://example.com/images/chair-1.jpg",
-            "https://example.com/images/chair-2.jpg"
-        ],
-        "category": "Furniture",
-        "stock": 75,
-        "sku": "EOC-2024-BLK",
-        "rating_avg": 4.4,
-        "rating_count": 290,
-        "is_active": true,
-        "tags": [
-            "office",
-            "chair",
-            "ergonomic",
-            "furniture"
-        ],
-        "brand": "ComfortPro"
-    },
-    {
-        "name": "Stainless Steel Water Bottle",
-        "slug": "stainless-steel-water-bottle",
-        "description": "Vacuum-insulated 32oz bottle keeps drinks cold for 24 hours.",
-        "price": 34.99,
-        "images": [
-            "https://example.com/images/bottle-1.jpg",
-            "https://example.com/images/bottle-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 500,
-        "sku": "SSWB-32OZ",
-        "rating_avg": 4.8,
-        "rating_count": 820,
-        "is_active": true,
-        "tags": [
-            "bottle",
-            "insulated",
-            "stainless-steel",
-            "eco-friendly"
-        ],
-        "brand": "HydroLife"
-    },
-    {
         "name": "Noise Cancelling Earbuds",
         "slug": "noise-cancelling-earbuds",
         "description": "True wireless earbuds with active noise cancellation and 24-hour battery.",
@@ -145,7 +54,7 @@
             "https://example.com/images/earbuds-1.jpg",
             "https://example.com/images/earbuds-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 220,
         "sku": "NCE-2024-WHT",
         "rating_avg": 4.4,
@@ -160,98 +69,6 @@
         "brand": "SoundMax"
     },
     {
-        "name": "Leather Wallet",
-        "slug": "leather-wallet",
-        "description": "Genuine leather bifold wallet with RFID blocking technology.",
-        "price": 49.99,
-        "images": [
-            "https://example.com/images/wallet-1.jpg",
-            "https://example.com/images/wallet-2.jpg"
-        ],
-        "category": "Accessories",
-        "stock": 400,
-        "sku": "LW-RFID-BRN",
-        "rating_avg": 4.5,
-        "rating_count": 610,
-        "is_active": true,
-        "tags": [
-            "wallet",
-            "leather",
-            "rfid",
-            "accessories"
-        ],
-        "brand": "UrbanCarry"
-    },
-    {
-        "name": "Yoga Mat Non-Slip",
-        "slug": "yoga-mat-non-slip",
-        "description": "Eco-friendly TPE yoga mat with alignment lines and carrying strap.",
-        "price": 39.99,
-        "images": [
-            "https://example.com/images/yoga-mat-1.jpg",
-            "https://example.com/images/yoga-mat-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 350,
-        "sku": "YM-TPE-PRP",
-        "rating_avg": 4.6,
-        "rating_count": 430,
-        "is_active": true,
-        "tags": [
-            "yoga",
-            "fitness",
-            "mat",
-            "eco-friendly"
-        ],
-        "brand": "ZenFlow"
-    },
-    {
-        "name": "Espresso Coffee Machine",
-        "slug": "espresso-coffee-machine",
-        "description": "15-bar espresso maker with milk frother and removable water tank.",
-        "price": 179.99,
-        "images": [
-            "https://example.com/images/espresso-1.jpg",
-            "https://example.com/images/espresso-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 90,
-        "sku": "ECM-15BAR",
-        "rating_avg": 4.3,
-        "rating_count": 270,
-        "is_active": true,
-        "tags": [
-            "coffee",
-            "espresso",
-            "kitchen",
-            "appliance"
-        ],
-        "brand": "BrewMaster"
-    },
-    {
-        "name": "Running Shoes",
-        "slug": "running-shoes",
-        "description": "Lightweight breathable running shoes with responsive cushioning.",
-        "price": 119.99,
-        "images": [
-            "https://example.com/images/running-shoes-1.jpg",
-            "https://example.com/images/running-shoes-2.jpg"
-        ],
-        "category": "Footwear",
-        "stock": 260,
-        "sku": "RS-2024-BLK",
-        "rating_avg": 4.7,
-        "rating_count": 540,
-        "is_active": true,
-        "tags": [
-            "shoes",
-            "running",
-            "sports",
-            "footwear"
-        ],
-        "brand": "SprintX"
-    },
-    {
         "name": "Portable Power Bank 20000mAh",
         "slug": "portable-power-bank-20000mah",
         "description": "Fast-charging power bank with dual USB ports and LED indicator.",
@@ -260,7 +77,7 @@
             "https://example.com/images/powerbank-1.jpg",
             "https://example.com/images/powerbank-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 480,
         "sku": "PB-20K-BLK",
         "rating_avg": 4.5,
@@ -283,7 +100,7 @@
             "https://example.com/images/speaker-1.jpg",
             "https://example.com/images/speaker-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 310,
         "sku": "BS-IPX7-BLU",
         "rating_avg": 4.4,
@@ -298,98 +115,6 @@
         "brand": "SoundMax"
     },
     {
-        "name": "Air Fryer 5.8QT",
-        "slug": "air-fryer-5-8qt",
-        "description": "Large capacity air fryer with 8 presets and non-stick basket.",
-        "price": 99.99,
-        "images": [
-            "https://example.com/images/airfryer-1.jpg",
-            "https://example.com/images/airfryer-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 180,
-        "sku": "AF-58QT-BLK",
-        "rating_avg": 4.7,
-        "rating_count": 920,
-        "is_active": true,
-        "tags": [
-            "airfryer",
-            "kitchen",
-            "cooking",
-            "appliance"
-        ],
-        "brand": "CrispChef"
-    },
-    {
-        "name": "Backpack Laptop 15.6 inch",
-        "slug": "backpack-laptop-15-6-inch",
-        "description": "Water-resistant backpack with USB charging port and anti-theft pocket.",
-        "price": 54.99,
-        "images": [
-            "https://example.com/images/backpack-1.jpg",
-            "https://example.com/images/backpack-2.jpg"
-        ],
-        "category": "Accessories",
-        "stock": 340,
-        "sku": "BP-156-GRY",
-        "rating_avg": 4.6,
-        "rating_count": 510,
-        "is_active": true,
-        "tags": [
-            "backpack",
-            "laptop",
-            "travel",
-            "accessories"
-        ],
-        "brand": "UrbanCarry"
-    },
-    {
-        "name": "Electric Toothbrush",
-        "slug": "electric-toothbrush",
-        "description": "Sonic electric toothbrush with 5 modes and 30-day battery life.",
-        "price": 69.99,
-        "images": [
-            "https://example.com/images/toothbrush-1.jpg",
-            "https://example.com/images/toothbrush-2.jpg"
-        ],
-        "category": "Personal Care",
-        "stock": 270,
-        "sku": "ETB-SONIC-WHT",
-        "rating_avg": 4.5,
-        "rating_count": 480,
-        "is_active": true,
-        "tags": [
-            "toothbrush",
-            "electric",
-            "personal-care",
-            "oral"
-        ],
-        "brand": "DentaCare"
-    },
-    {
-        "name": "Cast Iron Skillet 12 inch",
-        "slug": "cast-iron-skillet-12-inch",
-        "description": "Pre-seasoned cast iron skillet for stovetop, oven, and grill.",
-        "price": 39.99,
-        "images": [
-            "https://example.com/images/skillet-1.jpg",
-            "https://example.com/images/skillet-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 210,
-        "sku": "CIS-12IN",
-        "rating_avg": 4.8,
-        "rating_count": 640,
-        "is_active": true,
-        "tags": [
-            "skillet",
-            "cast-iron",
-            "cooking",
-            "kitchen"
-        ],
-        "brand": "IronChef"
-    },
-    {
         "name": "Wireless Mouse",
         "slug": "wireless-mouse",
         "description": "Silent wireless mouse with adjustable DPI and ergonomic design.",
@@ -398,7 +123,7 @@
             "https://example.com/images/mouse-1.jpg",
             "https://example.com/images/mouse-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 600,
         "sku": "WM-SILENT-BLK",
         "rating_avg": 4.4,
@@ -413,75 +138,6 @@
         "brand": "ClickPro"
     },
     {
-        "name": "Sunglasses Polarized UV400",
-        "slug": "sunglasses-polarized-uv400",
-        "description": "Classic polarized sunglasses with UV400 protection and lightweight frame.",
-        "price": 29.99,
-        "images": [
-            "https://example.com/images/sunglasses-1.jpg",
-            "https://example.com/images/sunglasses-2.jpg"
-        ],
-        "category": "Accessories",
-        "stock": 430,
-        "sku": "SG-UV400-BLK",
-        "rating_avg": 4.5,
-        "rating_count": 370,
-        "is_active": true,
-        "tags": [
-            "sunglasses",
-            "polarized",
-            "uv400",
-            "accessories"
-        ],
-        "brand": "SunShade"
-    },
-    {
-        "name": "Robot Vacuum Cleaner",
-        "slug": "robot-vacuum-cleaner",
-        "description": "Smart robot vacuum with app control, scheduling, and auto-charging.",
-        "price": 299.99,
-        "images": [
-            "https://example.com/images/robot-vacuum-1.jpg",
-            "https://example.com/images/robot-vacuum-2.jpg"
-        ],
-        "category": "Home Appliances",
-        "stock": 65,
-        "sku": "RVC-SMART-BLK",
-        "rating_avg": 4.6,
-        "rating_count": 410,
-        "is_active": true,
-        "tags": [
-            "vacuum",
-            "robot",
-            "smart",
-            "cleaning"
-        ],
-        "brand": "CleanBot"
-    },
-    {
-        "name": "Ceramic Coffee Mug Set",
-        "slug": "ceramic-coffee-mug-set",
-        "description": "Set of 4 handcrafted ceramic mugs, microwave and dishwasher safe.",
-        "price": 32.99,
-        "images": [
-            "https://example.com/images/mugs-1.jpg",
-            "https://example.com/images/mugs-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 290,
-        "sku": "CM-SET4-ART",
-        "rating_avg": 4.7,
-        "rating_count": 260,
-        "is_active": true,
-        "tags": [
-            "mugs",
-            "ceramic",
-            "coffee",
-            "kitchen"
-        ],
-        "brand": "ArtisanHome"
-    },
-    {
         "name": "Desk Lamp LED Adjustable",
         "slug": "desk-lamp-led-adjustable",
         "description": "Dimmable LED desk lamp with 3 color modes and USB charging port.",
@@ -490,7 +146,7 @@
             "https://example.com/images/desk-lamp-1.jpg",
             "https://example.com/images/desk-lamp-2.jpg"
         ],
-        "category": "Home Office",
+        "category": "6aba26befa7aba6701721437",
         "stock": 320,
         "sku": "DL-LED-ADJ",
         "rating_avg": 4.5,
@@ -505,75 +161,6 @@
         "brand": "BrightDesk"
     },
     {
-        "name": "Protein Powder Whey 2lb",
-        "slug": "protein-powder-whey-2lb",
-        "description": "24g protein per serving, vanilla flavor, 30 servings per container.",
-        "price": 49.99,
-        "images": [
-            "https://example.com/images/protein-1.jpg",
-            "https://example.com/images/protein-2.jpg"
-        ],
-        "category": "Health & Nutrition",
-        "stock": 380,
-        "sku": "PP-WHEY-VAN",
-        "rating_avg": 4.6,
-        "rating_count": 590,
-        "is_active": true,
-        "tags": [
-            "protein",
-            "whey",
-            "nutrition",
-            "fitness"
-        ],
-        "brand": "PowerFuel"
-    },
-    {
-        "name": "Phone Case Shockproof",
-        "slug": "phone-case-shockproof",
-        "description": "Military-grade drop protection case with raised camera bezel.",
-        "price": 19.99,
-        "images": [
-            "https://example.com/images/phone-case-1.jpg",
-            "https://example.com/images/phone-case-2.jpg"
-        ],
-        "category": "Accessories",
-        "stock": 750,
-        "sku": "PC-SHOCK-BLK",
-        "rating_avg": 4.4,
-        "rating_count": 920,
-        "is_active": true,
-        "tags": [
-            "phone-case",
-            "shockproof",
-            "protection",
-            "accessories"
-        ],
-        "brand": "GuardShell"
-    },
-    {
-        "name": "Instant Pot 6QT",
-        "slug": "instant-pot-6qt",
-        "description": "7-in-1 electric pressure cooker, slow cooker, rice cooker, and more.",
-        "price": 89.99,
-        "images": [
-            "https://example.com/images/instant-pot-1.jpg",
-            "https://example.com/images/instant-pot-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 140,
-        "sku": "IP-6QT-7IN1",
-        "rating_avg": 4.8,
-        "rating_count": 1200,
-        "is_active": true,
-        "tags": [
-            "instant-pot",
-            "cooker",
-            "kitchen",
-            "appliance"
-        ],
-        "brand": "QuickCook"
-    },
-    {
         "name": "Wireless Charging Pad",
         "slug": "wireless-charging-pad",
         "description": "15W fast wireless charger compatible with Qi-enabled devices.",
@@ -582,7 +169,7 @@
             "https://example.com/images/charging-pad-1.jpg",
             "https://example.com/images/charging-pad-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 520,
         "sku": "WCP-15W-BLK",
         "rating_avg": 4.3,
@@ -597,29 +184,6 @@
         "brand": "ChargeUp"
     },
     {
-        "name": "Winter Beanie Knit",
-        "slug": "winter-beanie-knit",
-        "description": "Soft acrylic knit beanie with fleece lining for extra warmth.",
-        "price": 16.99,
-        "images": [
-            "https://example.com/images/beanie-1.jpg",
-            "https://example.com/images/beanie-2.jpg"
-        ],
-        "category": "Clothing",
-        "stock": 610,
-        "sku": "WB-KNIT-GRY",
-        "rating_avg": 4.5,
-        "rating_count": 280,
-        "is_active": true,
-        "tags": [
-            "beanie",
-            "winter",
-            "knit",
-            "clothing"
-        ],
-        "brand": "WarmWear"
-    },
-    {
         "name": "Standing Desk Converter",
         "slug": "standing-desk-converter",
         "description": "Height-adjustable sit-stand desk converter with keyboard tray.",
@@ -628,7 +192,7 @@
             "https://example.com/images/desk-converter-1.jpg",
             "https://example.com/images/desk-converter-2.jpg"
         ],
-        "category": "Home Office",
+        "category": "6aba26befa7aba6701721437",
         "stock": 85,
         "sku": "SDC-ADJ-BLK",
         "rating_avg": 4.4,
@@ -643,167 +207,6 @@
         "brand": "ErgoRise"
     },
     {
-        "name": "Scented Candle Set",
-        "slug": "scented-candle-set",
-        "description": "Set of 3 soy wax candles with lavender, vanilla, and eucalyptus scents.",
-        "price": 28.99,
-        "images": [
-            "https://example.com/images/candles-1.jpg",
-            "https://example.com/images/candles-2.jpg"
-        ],
-        "category": "Home Decor",
-        "stock": 340,
-        "sku": "SC-SET3-SOY",
-        "rating_avg": 4.7,
-        "rating_count": 310,
-        "is_active": true,
-        "tags": [
-            "candles",
-            "scented",
-            "soy",
-            "decor"
-        ],
-        "brand": "AromaHome"
-    },
-    {
-        "name": "Gaming Headset 7.1 Surround",
-        "slug": "gaming-headset-7-1-surround",
-        "description": "7.1 surround sound gaming headset with noise-cancelling mic.",
-        "price": 79.99,
-        "images": [
-            "https://example.com/images/gaming-headset-1.jpg",
-            "https://example.com/images/gaming-headset-2.jpg"
-        ],
-        "category": "Gaming",
-        "stock": 240,
-        "sku": "GH-71-RGB",
-        "rating_avg": 4.5,
-        "rating_count": 520,
-        "is_active": true,
-        "tags": [
-            "headset",
-            "gaming",
-            "surround",
-            "rgb"
-        ],
-        "brand": "HyperKey"
-    },
-    {
-        "name": "Digital Kitchen Scale",
-        "slug": "digital-kitchen-scale",
-        "description": "Precision digital scale with tare function and LCD display.",
-        "price": 22.99,
-        "images": [
-            "https://example.com/images/kitchen-scale-1.jpg",
-            "https://example.com/images/kitchen-scale-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 410,
-        "sku": "DKS-PREC-SLV",
-        "rating_avg": 4.6,
-        "rating_count": 380,
-        "is_active": true,
-        "tags": [
-            "scale",
-            "kitchen",
-            "digital",
-            "cooking"
-        ],
-        "brand": "MeasurePro"
-    },
-    {
-        "name": "Hiking Backpack 40L",
-        "slug": "hiking-backpack-40l",
-        "description": "Waterproof 40L hiking backpack with rain cover and hip belt.",
-        "price": 84.99,
-        "images": [
-            "https://example.com/images/hiking-backpack-1.jpg",
-            "https://example.com/images/hiking-backpack-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 160,
-        "sku": "HB-40L-GRN",
-        "rating_avg": 4.6,
-        "rating_count": 230,
-        "is_active": true,
-        "tags": [
-            "backpack",
-            "hiking",
-            "outdoor",
-            "travel"
-        ],
-        "brand": "TrailBlaze"
-    },
-    {
-        "name": "Electric Kettle 1.7L",
-        "slug": "electric-kettle-1-7l",
-        "description": "Stainless steel electric kettle with auto shut-off and boil-dry protection.",
-        "price": 36.99,
-        "images": [
-            "https://example.com/images/kettle-1.jpg",
-            "https://example.com/images/kettle-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 330,
-        "sku": "EK-17L-SS",
-        "rating_avg": 4.5,
-        "rating_count": 560,
-        "is_active": true,
-        "tags": [
-            "kettle",
-            "electric",
-            "kitchen",
-            "stainless-steel"
-        ],
-        "brand": "BrewMaster"
-    },
-    {
-        "name": "Board Game Strategy",
-        "slug": "board-game-strategy",
-        "description": "Award-winning strategy board game for 2-5 players, ages 12+.",
-        "price": 44.99,
-        "images": [
-            "https://example.com/images/board-game-1.jpg",
-            "https://example.com/images/board-game-2.jpg"
-        ],
-        "category": "Toys & Games",
-        "stock": 190,
-        "sku": "BG-STRAT-2TO5",
-        "rating_avg": 4.8,
-        "rating_count": 670,
-        "is_active": true,
-        "tags": [
-            "board-game",
-            "strategy",
-            "family",
-            "toys"
-        ],
-        "brand": "MindPlay"
-    },
-    {
-        "name": "Resistance Bands Set",
-        "slug": "resistance-bands-set",
-        "description": "Set of 5 resistance bands with handles, ankle straps, and door anchor.",
-        "price": 26.99,
-        "images": [
-            "https://example.com/images/resistance-bands-1.jpg",
-            "https://example.com/images/resistance-bands-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 450,
-        "sku": "RB-SET5-MUL",
-        "rating_avg": 4.5,
-        "rating_count": 620,
-        "is_active": true,
-        "tags": [
-            "resistance-bands",
-            "fitness",
-            "home-gym",
-            "workout"
-        ],
-        "brand": "FlexFit"
-    },
-    {
         "name": "External Hard Drive 2TB",
         "slug": "external-hard-drive-2tb",
         "description": "Portable 2TB external hard drive with USB 3.0 and shock-resistant casing.",
@@ -812,7 +215,7 @@
             "https://example.com/images/hard-drive-1.jpg",
             "https://example.com/images/hard-drive-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 200,
         "sku": "EHD-2TB-USB3",
         "rating_avg": 4.6,
@@ -827,52 +230,6 @@
         "brand": "DataSafe"
     },
     {
-        "name": "Makeup Brush Set 12 Pieces",
-        "slug": "makeup-brush-set-12-pieces",
-        "description": "Professional makeup brush set with synthetic bristles and case.",
-        "price": 31.99,
-        "images": [
-            "https://example.com/images/makeup-brushes-1.jpg",
-            "https://example.com/images/makeup-brushes-2.jpg"
-        ],
-        "category": "Beauty",
-        "stock": 370,
-        "sku": "MBS-12PC-ROSE",
-        "rating_avg": 4.4,
-        "rating_count": 490,
-        "is_active": true,
-        "tags": [
-            "makeup",
-            "brushes",
-            "beauty",
-            "cosmetics"
-        ],
-        "brand": "GlamPro"
-    },
-    {
-        "name": "Camping Tent 4 Person",
-        "slug": "camping-tent-4-person",
-        "description": "Waterproof 4-person camping tent with easy setup and carry bag.",
-        "price": 129.99,
-        "images": [
-            "https://example.com/images/tent-1.jpg",
-            "https://example.com/images/tent-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 110,
-        "sku": "CT-4P-GRN",
-        "rating_avg": 4.5,
-        "rating_count": 280,
-        "is_active": true,
-        "tags": [
-            "tent",
-            "camping",
-            "outdoor",
-            "waterproof"
-        ],
-        "brand": "TrailBlaze"
-    },
-    {
         "name": "Smart LED Light Bulb",
         "slug": "smart-led-light-bulb",
         "description": "Wi-Fi smart bulb with 16 million colors, voice control, and scheduling.",
@@ -881,7 +238,7 @@
             "https://example.com/images/smart-bulb-1.jpg",
             "https://example.com/images/smart-bulb-2.jpg"
         ],
-        "category": "Smart Home",
+        "category": "6aba286cfa7aba6701721438",
         "stock": 580,
         "sku": "SLB-WIFI-RGB",
         "rating_avg": 4.3,
@@ -896,121 +253,6 @@
         "brand": "HomeIQ"
     },
     {
-        "name": "Leather Journal Notebook",
-        "slug": "leather-journal-notebook",
-        "description": "Handcrafted leather journal with 200 lined pages and pen loop.",
-        "price": 27.99,
-        "images": [
-            "https://example.com/images/journal-1.jpg",
-            "https://example.com/images/journal-2.jpg"
-        ],
-        "category": "Stationery",
-        "stock": 290,
-        "sku": "LJ-200PG-BRN",
-        "rating_avg": 4.7,
-        "rating_count": 350,
-        "is_active": true,
-        "tags": [
-            "journal",
-            "notebook",
-            "leather",
-            "stationery"
-        ],
-        "brand": "ArtisanHome"
-    },
-    {
-        "name": "Car Phone Mount Magnetic",
-        "slug": "car-phone-mount-magnetic",
-        "description": "Magnetic car phone mount with 360-degree rotation and strong grip.",
-        "price": 21.99,
-        "images": [
-            "https://example.com/images/car-mount-1.jpg",
-            "https://example.com/images/car-mount-2.jpg"
-        ],
-        "category": "Automotive",
-        "stock": 490,
-        "sku": "CPM-MAG-BLK",
-        "rating_avg": 4.4,
-        "rating_count": 830,
-        "is_active": true,
-        "tags": [
-            "car-mount",
-            "magnetic",
-            "phone",
-            "automotive"
-        ],
-        "brand": "DriveGrip"
-    },
-    {
-        "name": "Face Mask Hydrating",
-        "slug": "face-mask-hydrating",
-        "description": "Hydrating sheet mask with hyaluronic acid and vitamin E, pack of 10.",
-        "price": 23.99,
-        "images": [
-            "https://example.com/images/face-mask-1.jpg",
-            "https://example.com/images/face-mask-2.jpg"
-        ],
-        "category": "Beauty",
-        "stock": 620,
-        "sku": "FM-HYDR-10PK",
-        "rating_avg": 4.6,
-        "rating_count": 540,
-        "is_active": true,
-        "tags": [
-            "face-mask",
-            "skincare",
-            "hydrating",
-            "beauty"
-        ],
-        "brand": "GlowSkin"
-    },
-    {
-        "name": "Blender Portable USB",
-        "slug": "blender-portable-usb",
-        "description": "Personal blender with USB rechargeable battery, 16oz capacity.",
-        "price": 38.99,
-        "images": [
-            "https://example.com/images/blender-1.jpg",
-            "https://example.com/images/blender-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 280,
-        "sku": "BP-USB-16OZ",
-        "rating_avg": 4.2,
-        "rating_count": 390,
-        "is_active": true,
-        "tags": [
-            "blender",
-            "portable",
-            "usb",
-            "kitchen"
-        ],
-        "brand": "FreshMix"
-    },
-    {
-        "name": "Winter Gloves Touchscreen",
-        "slug": "winter-gloves-touchscreen",
-        "description": "Insulated winter gloves with touchscreen fingertips and grip palm.",
-        "price": 24.99,
-        "images": [
-            "https://example.com/images/gloves-1.jpg",
-            "https://example.com/images/gloves-2.jpg"
-        ],
-        "category": "Clothing",
-        "stock": 410,
-        "sku": "WG-TOUCH-BLK",
-        "rating_avg": 4.5,
-        "rating_count": 310,
-        "is_active": true,
-        "tags": [
-            "gloves",
-            "winter",
-            "touchscreen",
-            "clothing"
-        ],
-        "brand": "WarmWear"
-    },
-    {
         "name": "Wireless Keyboard Slim",
         "slug": "wireless-keyboard-slim",
         "description": "Slim wireless keyboard with quiet keys and long battery life.",
@@ -1019,7 +261,7 @@
             "https://example.com/images/wireless-keyboard-1.jpg",
             "https://example.com/images/wireless-keyboard-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 360,
         "sku": "WK-SLIM-WHT",
         "rating_avg": 4.4,
@@ -1034,144 +276,6 @@
         "brand": "ClickPro"
     },
     {
-        "name": "Pet Bed Orthopedic",
-        "slug": "pet-bed-orthopedic",
-        "description": "Orthopedic memory foam pet bed with washable cover, size L.",
-        "price": 59.99,
-        "images": [
-            "https://example.com/images/pet-bed-1.jpg",
-            "https://example.com/images/pet-bed-2.jpg"
-        ],
-        "category": "Pet Supplies",
-        "stock": 170,
-        "sku": "PB-ORTHO-L-GRY",
-        "rating_avg": 4.7,
-        "rating_count": 420,
-        "is_active": true,
-        "tags": [
-            "pet-bed",
-            "orthopedic",
-            "dog",
-            "cat"
-        ],
-        "brand": "PawComfort"
-    },
-    {
-        "name": "Insulated Lunch Bag",
-        "slug": "insulated-lunch-bag",
-        "description": "Leakproof insulated lunch bag with adjustable shoulder strap.",
-        "price": 25.99,
-        "images": [
-            "https://example.com/images/lunch-bag-1.jpg",
-            "https://example.com/images/lunch-bag-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 440,
-        "sku": "ILB-LEAK-BLU",
-        "rating_avg": 4.5,
-        "rating_count": 380,
-        "is_active": true,
-        "tags": [
-            "lunch-bag",
-            "insulated",
-            "leakproof",
-            "kitchen"
-        ],
-        "brand": "FreshCarry"
-    },
-    {
-        "name": "VR Headset Standalone",
-        "slug": "vr-headset-standalone",
-        "description": "Standalone VR headset with 4K display and motion controllers.",
-        "price": 399.99,
-        "images": [
-            "https://example.com/images/vr-headset-1.jpg",
-            "https://example.com/images/vr-headset-2.jpg"
-        ],
-        "category": "Gaming",
-        "stock": 55,
-        "sku": "VR-4K-STAND",
-        "rating_avg": 4.6,
-        "rating_count": 290,
-        "is_active": true,
-        "tags": [
-            "vr",
-            "headset",
-            "gaming",
-            "4k"
-        ],
-        "brand": "ImmerseX"
-    },
-    {
-        "name": "Hair Dryer Ionic",
-        "slug": "hair-dryer-ionic",
-        "description": "Ionic hair dryer with 3 heat settings and cool shot button.",
-        "price": 47.99,
-        "images": [
-            "https://example.com/images/hair-dryer-1.jpg",
-            "https://example.com/images/hair-dryer-2.jpg"
-        ],
-        "category": "Personal Care",
-        "stock": 230,
-        "sku": "HD-IONIC-PNK",
-        "rating_avg": 4.4,
-        "rating_count": 360,
-        "is_active": true,
-        "tags": [
-            "hair-dryer",
-            "ionic",
-            "personal-care",
-            "beauty"
-        ],
-        "brand": "GlamPro"
-    },
-    {
-        "name": "Camping Lantern LED",
-        "slug": "camping-lantern-led",
-        "description": "Rechargeable LED camping lantern with 3 brightness modes and power bank.",
-        "price": 33.99,
-        "images": [
-            "https://example.com/images/lantern-1.jpg",
-            "https://example.com/images/lantern-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 310,
-        "sku": "CL-LED-RCH",
-        "rating_avg": 4.6,
-        "rating_count": 270,
-        "is_active": true,
-        "tags": [
-            "lantern",
-            "camping",
-            "led",
-            "outdoor"
-        ],
-        "brand": "TrailBlaze"
-    },
-    {
-        "name": "Bath Bombs Gift Set",
-        "slug": "bath-bombs-gift-set",
-        "description": "Set of 12 natural bath bombs with essential oils and shea butter.",
-        "price": 29.99,
-        "images": [
-            "https://example.com/images/bath-bombs-1.jpg",
-            "https://example.com/images/bath-bombs-2.jpg"
-        ],
-        "category": "Beauty",
-        "stock": 390,
-        "sku": "BB-SET12-NAT",
-        "rating_avg": 4.7,
-        "rating_count": 580,
-        "is_active": true,
-        "tags": [
-            "bath-bombs",
-            "spa",
-            "beauty",
-            "gift"
-        ],
-        "brand": "AromaHome"
-    },
-    {
         "name": "Laptop Stand Aluminum",
         "slug": "laptop-stand-aluminum",
         "description": "Ergonomic aluminum laptop stand with adjustable height and ventilation.",
@@ -1180,7 +284,7 @@
             "https://example.com/images/laptop-stand-1.jpg",
             "https://example.com/images/laptop-stand-2.jpg"
         ],
-        "category": "Home Office",
+        "category": "6aba26befa7aba6701721437",
         "stock": 280,
         "sku": "LS-ALUM-SLV",
         "rating_avg": 4.6,
@@ -1195,167 +299,6 @@
         "brand": "ErgoRise"
     },
     {
-        "name": "Digital Alarm Clock",
-        "slug": "digital-alarm-clock",
-        "description": "Digital alarm clock with dual alarms, temperature display, and USB port.",
-        "price": 26.99,
-        "images": [
-            "https://example.com/images/alarm-clock-1.jpg",
-            "https://example.com/images/alarm-clock-2.jpg"
-        ],
-        "category": "Home Decor",
-        "stock": 350,
-        "sku": "DAC-DUAL-BLK",
-        "rating_avg": 4.3,
-        "rating_count": 290,
-        "is_active": true,
-        "tags": [
-            "alarm-clock",
-            "digital",
-            "bedroom",
-            "decor"
-        ],
-        "brand": "TimeWise"
-    },
-    {
-        "name": "Dumbbell Set Adjustable",
-        "slug": "dumbbell-set-adjustable",
-        "description": "Adjustable dumbbell set 5-25 lbs per dumbbell with stand.",
-        "price": 199.99,
-        "images": [
-            "https://example.com/images/dumbbells-1.jpg",
-            "https://example.com/images/dumbbells-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 95,
-        "sku": "DS-ADJ-5TO25",
-        "rating_avg": 4.7,
-        "rating_count": 340,
-        "is_active": true,
-        "tags": [
-            "dumbbells",
-            "adjustable",
-            "fitness",
-            "home-gym"
-        ],
-        "brand": "FlexFit"
-    },
-    {
-        "name": "Essential Oil Diffuser",
-        "slug": "essential-oil-diffuser",
-        "description": "Ultrasonic aromatherapy diffuser with 7-color LED and auto shut-off.",
-        "price": 32.99,
-        "images": [
-            "https://example.com/images/diffuser-1.jpg",
-            "https://example.com/images/diffuser-2.jpg"
-        ],
-        "category": "Home Decor",
-        "stock": 420,
-        "sku": "EOD-ULTR-7LED",
-        "rating_avg": 4.5,
-        "rating_count": 610,
-        "is_active": true,
-        "tags": [
-            "diffuser",
-            "aromatherapy",
-            "essential-oils",
-            "home"
-        ],
-        "brand": "ZenFlow"
-    },
-    {
-        "name": "Gaming Chair Racing Style",
-        "slug": "gaming-chair-racing-style",
-        "description": "Ergonomic racing-style gaming chair with lumbar support and footrest.",
-        "price": 189.99,
-        "images": [
-            "https://example.com/images/gaming-chair-1.jpg",
-            "https://example.com/images/gaming-chair-2.jpg"
-        ],
-        "category": "Gaming",
-        "stock": 120,
-        "sku": "GC-RACE-RED",
-        "rating_avg": 4.4,
-        "rating_count": 380,
-        "is_active": true,
-        "tags": [
-            "gaming-chair",
-            "racing",
-            "ergonomic",
-            "gaming"
-        ],
-        "brand": "HyperKey"
-    },
-    {
-        "name": "Cutting Board Bamboo Set",
-        "slug": "cutting-board-bamboo-set",
-        "description": "Set of 3 bamboo cutting boards with juice groove and handles.",
-        "price": 34.99,
-        "images": [
-            "https://example.com/images/cutting-board-1.jpg",
-            "https://example.com/images/cutting-board-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 310,
-        "sku": "CB-BAM-SET3",
-        "rating_avg": 4.6,
-        "rating_count": 440,
-        "is_active": true,
-        "tags": [
-            "cutting-board",
-            "bamboo",
-            "kitchen",
-            "cooking"
-        ],
-        "brand": "EcoKitchen"
-    },
-    {
-        "name": "Fitness Tracker Band",
-        "slug": "fitness-tracker-band",
-        "description": "Slim fitness tracker with step counter, heart rate, and sleep monitor.",
-        "price": 59.99,
-        "images": [
-            "https://example.com/images/fitness-band-1.jpg",
-            "https://example.com/images/fitness-band-2.jpg"
-        ],
-        "category": "Wearables",
-        "stock": 340,
-        "sku": "FTB-SLIM-BLK",
-        "rating_avg": 4.3,
-        "rating_count": 520,
-        "is_active": true,
-        "tags": [
-            "fitness-tracker",
-            "wearable",
-            "band",
-            "health"
-        ],
-        "brand": "FitTech"
-    },
-    {
-        "name": "Board Game Family Edition",
-        "slug": "board-game-family-edition",
-        "description": "Fun family board game for 2-8 players, ages 8 and up.",
-        "price": 34.99,
-        "images": [
-            "https://example.com/images/family-game-1.jpg",
-            "https://example.com/images/family-game-2.jpg"
-        ],
-        "category": "Toys & Games",
-        "stock": 260,
-        "sku": "BG-FAM-2TO8",
-        "rating_avg": 4.7,
-        "rating_count": 490,
-        "is_active": true,
-        "tags": [
-            "board-game",
-            "family",
-            "party",
-            "toys"
-        ],
-        "brand": "MindPlay"
-    },
-    {
         "name": "Wireless Earbuds Sport",
         "slug": "wireless-earbuds-sport",
         "description": "Sweatproof sport earbuds with ear hooks and 8-hour battery.",
@@ -1364,7 +307,7 @@
             "https://example.com/images/sport-earbuds-1.jpg",
             "https://example.com/images/sport-earbuds-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 300,
         "sku": "WE-SPORT-BLK",
         "rating_avg": 4.4,
@@ -1379,167 +322,6 @@
         "brand": "SoundMax"
     },
     {
-        "name": "Sous Vide Precision Cooker",
-        "slug": "sous-vide-precision-cooker",
-        "description": "Wi-Fi sous vide cooker with app control and 1100W power.",
-        "price": 129.99,
-        "images": [
-            "https://example.com/images/sous-vide-1.jpg",
-            "https://example.com/images/sous-vide-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 130,
-        "sku": "SV-PREC-WIFI",
-        "rating_avg": 4.6,
-        "rating_count": 250,
-        "is_active": true,
-        "tags": [
-            "sous-vide",
-            "cooker",
-            "kitchen",
-            "precision"
-        ],
-        "brand": "CrispChef"
-    },
-    {
-        "name": "Travel Pillow Memory Foam",
-        "slug": "travel-pillow-memory-foam",
-        "description": "Memory foam travel pillow with 360-degree neck support and carry bag.",
-        "price": 27.99,
-        "images": [
-            "https://example.com/images/travel-pillow-1.jpg",
-            "https://example.com/images/travel-pillow-2.jpg"
-        ],
-        "category": "Travel",
-        "stock": 380,
-        "sku": "TP-MEM-360",
-        "rating_avg": 4.5,
-        "rating_count": 340,
-        "is_active": true,
-        "tags": [
-            "travel-pillow",
-            "memory-foam",
-            "travel",
-            "comfort"
-        ],
-        "brand": "ComfortPro"
-    },
-    {
-        "name": "Electric Screwdriver Set",
-        "slug": "electric-screwdriver-set",
-        "description": "Cordless electric screwdriver with 50-piece bit set and LED light.",
-        "price": 39.99,
-        "images": [
-            "https://example.com/images/screwdriver-1.jpg",
-            "https://example.com/images/screwdriver-2.jpg"
-        ],
-        "category": "Tools & Home Improvement",
-        "stock": 210,
-        "sku": "ES-50PC-LED",
-        "rating_avg": 4.5,
-        "rating_count": 310,
-        "is_active": true,
-        "tags": [
-            "screwdriver",
-            "electric",
-            "tools",
-            "diy"
-        ],
-        "brand": "FixItPro"
-    },
-    {
-        "name": "Kids Building Blocks Set",
-        "slug": "kids-building-blocks-set",
-        "description": "500-piece building blocks set with storage box, ages 4+.",
-        "price": 42.99,
-        "images": [
-            "https://example.com/images/blocks-1.jpg",
-            "https://example.com/images/blocks-2.jpg"
-        ],
-        "category": "Toys & Games",
-        "stock": 290,
-        "sku": "BB-500PC-KID",
-        "rating_avg": 4.8,
-        "rating_count": 560,
-        "is_active": true,
-        "tags": [
-            "blocks",
-            "kids",
-            "building",
-            "toys"
-        ],
-        "brand": "PlaySmart"
-    },
-    {
-        "name": "Coffee Grinder Electric",
-        "slug": "coffee-grinder-electric",
-        "description": "Electric burr coffee grinder with 18 grind settings and timer.",
-        "price": 54.99,
-        "images": [
-            "https://example.com/images/coffee-grinder-1.jpg",
-            "https://example.com/images/coffee-grinder-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 180,
-        "sku": "CG-ELEC-18S",
-        "rating_avg": 4.6,
-        "rating_count": 390,
-        "is_active": true,
-        "tags": [
-            "coffee-grinder",
-            "electric",
-            "kitchen",
-            "coffee"
-        ],
-        "brand": "BrewMaster"
-    },
-    {
-        "name": "Phone Ring Holder Stand",
-        "slug": "phone-ring-holder-stand",
-        "description": "Phone ring holder with kickstand function and magnetic car mount compatibility.",
-        "price": 12.99,
-        "images": [
-            "https://example.com/images/ring-holder-1.jpg",
-            "https://example.com/images/ring-holder-2.jpg"
-        ],
-        "category": "Accessories",
-        "stock": 680,
-        "sku": "PRH-STAND-SLV",
-        "rating_avg": 4.3,
-        "rating_count": 720,
-        "is_active": true,
-        "tags": [
-            "phone-holder",
-            "ring",
-            "stand",
-            "accessories"
-        ],
-        "brand": "GuardShell"
-    },
-    {
-        "name": "Sleep Mask Silk",
-        "slug": "sleep-mask-silk",
-        "description": "100% mulberry silk sleep mask with adjustable strap and travel pouch.",
-        "price": 22.99,
-        "images": [
-            "https://example.com/images/sleep-mask-1.jpg",
-            "https://example.com/images/sleep-mask-2.jpg"
-        ],
-        "category": "Personal Care",
-        "stock": 460,
-        "sku": "SM-SILK-BLK",
-        "rating_avg": 4.7,
-        "rating_count": 510,
-        "is_active": true,
-        "tags": [
-            "sleep-mask",
-            "silk",
-            "travel",
-            "personal-care"
-        ],
-        "brand": "DreamRest"
-    },
-    {
         "name": "Wi-Fi Router Dual Band",
         "slug": "wi-fi-router-dual-band",
         "description": "Dual-band Wi-Fi router with 1200Mbps speed and 4 antennas.",
@@ -1548,7 +330,7 @@
             "https://example.com/images/router-1.jpg",
             "https://example.com/images/router-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 220,
         "sku": "WR-DUAL-1200",
         "rating_avg": 4.4,
@@ -1563,98 +345,6 @@
         "brand": "NetSpeed"
     },
     {
-        "name": "Watercolor Paint Set",
-        "slug": "watercolor-paint-set",
-        "description": "24-color watercolor paint set with brushes and mixing palette.",
-        "price": 28.99,
-        "images": [
-            "https://example.com/images/watercolor-1.jpg",
-            "https://example.com/images/watercolor-2.jpg"
-        ],
-        "category": "Art Supplies",
-        "stock": 310,
-        "sku": "WC-24COL-SET",
-        "rating_avg": 4.6,
-        "rating_count": 280,
-        "is_active": true,
-        "tags": [
-            "watercolor",
-            "paint",
-            "art",
-            "supplies"
-        ],
-        "brand": "ArtisanHome"
-    },
-    {
-        "name": "Electric Blanket Queen",
-        "slug": "electric-blanket-queen",
-        "description": "Queen-size electric blanket with dual controllers and auto shut-off.",
-        "price": 79.99,
-        "images": [
-            "https://example.com/images/electric-blanket-1.jpg",
-            "https://example.com/images/electric-blanket-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 140,
-        "sku": "EB-QUEEN-DUAL",
-        "rating_avg": 4.5,
-        "rating_count": 320,
-        "is_active": true,
-        "tags": [
-            "electric-blanket",
-            "queen",
-            "warm",
-            "home"
-        ],
-        "brand": "WarmWear"
-    },
-    {
-        "name": "Puzzle 1000 Pieces",
-        "slug": "puzzle-1000-pieces",
-        "description": "1000-piece landscape jigsaw puzzle for adults and kids 12+.",
-        "price": 24.99,
-        "images": [
-            "https://example.com/images/puzzle-1.jpg",
-            "https://example.com/images/puzzle-2.jpg"
-        ],
-        "category": "Toys & Games",
-        "stock": 370,
-        "sku": "PZ-1000-LAND",
-        "rating_avg": 4.7,
-        "rating_count": 420,
-        "is_active": true,
-        "tags": [
-            "puzzle",
-            "jigsaw",
-            "family",
-            "toys"
-        ],
-        "brand": "MindPlay"
-    },
-    {
-        "name": "Hand Mixer Electric",
-        "slug": "hand-mixer-electric",
-        "description": "5-speed electric hand mixer with beaters, dough hooks, and storage case.",
-        "price": 34.99,
-        "images": [
-            "https://example.com/images/hand-mixer-1.jpg",
-            "https://example.com/images/hand-mixer-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 250,
-        "sku": "HM-ELEC-5SPD",
-        "rating_avg": 4.4,
-        "rating_count": 340,
-        "is_active": true,
-        "tags": [
-            "hand-mixer",
-            "electric",
-            "baking",
-            "kitchen"
-        ],
-        "brand": "CrispChef"
-    },
-    {
         "name": "Solar Power Bank 10000mAh",
         "slug": "solar-power-bank-10000mah",
         "description": "Solar power bank with dual USB ports and LED flashlight for outdoor use.",
@@ -1663,7 +353,7 @@
             "https://example.com/images/solar-powerbank-1.jpg",
             "https://example.com/images/solar-powerbank-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 330,
         "sku": "SPB-10K-SOL",
         "rating_avg": 4.2,
@@ -1678,29 +368,6 @@
         "brand": "ChargeUp"
     },
     {
-        "name": "Kids Water Bottle Stainless",
-        "slug": "kids-water-bottle-stainless",
-        "description": "14oz stainless steel kids water bottle with straw lid and cute design.",
-        "price": 19.99,
-        "images": [
-            "https://example.com/images/kids-bottle-1.jpg",
-            "https://example.com/images/kids-bottle-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 540,
-        "sku": "KWB-14OZ-STR",
-        "rating_avg": 4.6,
-        "rating_count": 470,
-        "is_active": true,
-        "tags": [
-            "water-bottle",
-            "kids",
-            "stainless-steel",
-            "eco-friendly"
-        ],
-        "brand": "HydroLife"
-    },
-    {
         "name": "Desk Organizer Bamboo",
         "slug": "desk-organizer-bamboo",
         "description": "Bamboo desk organizer with compartments for pens, phone, and notes.",
@@ -1709,7 +376,7 @@
             "https://example.com/images/desk-organizer-1.jpg",
             "https://example.com/images/desk-organizer-2.jpg"
         ],
-        "category": "Home Office",
+        "category": "6aba26befa7aba6701721437",
         "stock": 310,
         "sku": "DO-BAM-MUL",
         "rating_avg": 4.5,
@@ -1724,29 +391,6 @@
         "brand": "EcoKitchen"
     },
     {
-        "name": "Skipping Rope Adjustable",
-        "slug": "skipping-rope-adjustable",
-        "description": "Adjustable speed skipping rope with ball bearings and foam handles.",
-        "price": 14.99,
-        "images": [
-            "https://example.com/images/skipping-rope-1.jpg",
-            "https://example.com/images/skipping-rope-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 580,
-        "sku": "SR-ADJ-SPD",
-        "rating_avg": 4.5,
-        "rating_count": 620,
-        "is_active": true,
-        "tags": [
-            "skipping-rope",
-            "fitness",
-            "cardio",
-            "workout"
-        ],
-        "brand": "FlexFit"
-    },
-    {
         "name": "Cable Organizer Clips",
         "slug": "cable-organizer-clips",
         "description": "Pack of 20 adhesive cable organizer clips for desk and wall management.",
@@ -1755,7 +399,7 @@
             "https://example.com/images/cable-clips-1.jpg",
             "https://example.com/images/cable-clips-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 720,
         "sku": "CO-CLIP-20PK",
         "rating_avg": 4.4,
@@ -1770,98 +414,6 @@
         "brand": "ClickPro"
     },
     {
-        "name": "Ceramic Planter Set",
-        "slug": "ceramic-planter-set",
-        "description": "Set of 3 ceramic planters with drainage holes and saucers.",
-        "price": 36.99,
-        "images": [
-            "https://example.com/images/planters-1.jpg",
-            "https://example.com/images/planters-2.jpg"
-        ],
-        "category": "Home Decor",
-        "stock": 270,
-        "sku": "CP-SET3-WHT",
-        "rating_avg": 4.7,
-        "rating_count": 310,
-        "is_active": true,
-        "tags": [
-            "planters",
-            "ceramic",
-            "decor",
-            "plants"
-        ],
-        "brand": "ArtisanHome"
-    },
-    {
-        "name": "Fishing Rod Combo",
-        "slug": "fishing-rod-combo",
-        "description": "Fishing rod and reel combo with telescopic design and carry case.",
-        "price": 49.99,
-        "images": [
-            "https://example.com/images/fishing-rod-1.jpg",
-            "https://example.com/images/fishing-rod-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 190,
-        "sku": "FR-COMBO-TEL",
-        "rating_avg": 4.4,
-        "rating_count": 240,
-        "is_active": true,
-        "tags": [
-            "fishing",
-            "rod",
-            "reel",
-            "outdoor"
-        ],
-        "brand": "TrailBlaze"
-    },
-    {
-        "name": "Makeup Mirror LED",
-        "slug": "makeup-mirror-led",
-        "description": "LED makeup mirror with touch dimming, 3 color modes, and USB charging.",
-        "price": 43.99,
-        "images": [
-            "https://example.com/images/makeup-mirror-1.jpg",
-            "https://example.com/images/makeup-mirror-2.jpg"
-        ],
-        "category": "Beauty",
-        "stock": 240,
-        "sku": "MM-LED-TOUCH",
-        "rating_avg": 4.6,
-        "rating_count": 390,
-        "is_active": true,
-        "tags": [
-            "makeup-mirror",
-            "led",
-            "beauty",
-            "vanity"
-        ],
-        "brand": "GlamPro"
-    },
-    {
-        "name": "Camping Chair Folding",
-        "slug": "camping-chair-folding",
-        "description": "Folding camping chair with cup holder and carrying bag, supports 300 lbs.",
-        "price": 44.99,
-        "images": [
-            "https://example.com/images/camping-chair-1.jpg",
-            "https://example.com/images/camping-chair-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 210,
-        "sku": "CC-FOLD-CUP",
-        "rating_avg": 4.5,
-        "rating_count": 330,
-        "is_active": true,
-        "tags": [
-            "camping-chair",
-            "folding",
-            "outdoor",
-            "portable"
-        ],
-        "brand": "TrailBlaze"
-    },
-    {
         "name": "Smart Plug Wi-Fi",
         "slug": "smart-plug-wifi",
         "description": "Wi-Fi smart plug with voice control, scheduling, and energy monitoring.",
@@ -1870,7 +422,7 @@
             "https://example.com/images/smart-plug-1.jpg",
             "https://example.com/images/smart-plug-2.jpg"
         ],
-        "category": "Smart Home",
+        "category": "6aba286cfa7aba6701721438",
         "stock": 650,
         "sku": "SP-WIFI-ENERGY",
         "rating_avg": 4.4,
@@ -1885,29 +437,6 @@
         "brand": "HomeIQ"
     },
     {
-        "name": "Nail Care Kit",
-        "slug": "nail-care-kit",
-        "description": "15-piece nail care kit with stainless steel tools and travel case.",
-        "price": 21.99,
-        "images": [
-            "https://example.com/images/nail-kit-1.jpg",
-            "https://example.com/images/nail-kit-2.jpg"
-        ],
-        "category": "Personal Care",
-        "stock": 430,
-        "sku": "NCK-15PC-SS",
-        "rating_avg": 4.5,
-        "rating_count": 370,
-        "is_active": true,
-        "tags": [
-            "nail-care",
-            "kit",
-            "grooming",
-            "personal-care"
-        ],
-        "brand": "DentaCare"
-    },
-    {
         "name": "Wireless Presenter Clicker",
         "slug": "wireless-presenter-clicker",
         "description": "Wireless presentation clicker with laser pointer and USB receiver.",
@@ -1916,7 +445,7 @@
             "https://example.com/images/presenter-1.jpg",
             "https://example.com/images/presenter-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 350,
         "sku": "WP-LASER-USB",
         "rating_avg": 4.6,
@@ -1931,52 +460,6 @@
         "brand": "ClickPro"
     },
     {
-        "name": "Kids Lunch Box Bento",
-        "slug": "kids-lunch-box-bento",
-        "description": "Bento-style kids lunch box with compartments and leakproof lid.",
-        "price": 26.99,
-        "images": [
-            "https://example.com/images/bento-1.jpg",
-            "https://example.com/images/bento-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 380,
-        "sku": "KLB-BENTO-BLU",
-        "rating_avg": 4.6,
-        "rating_count": 410,
-        "is_active": true,
-        "tags": [
-            "lunch-box",
-            "bento",
-            "kids",
-            "kitchen"
-        ],
-        "brand": "FreshCarry"
-    },
-    {
-        "name": "Massage Gun Percussion",
-        "slug": "massage-gun-percussion",
-        "description": "Percussion massage gun with 6 speeds and 4 interchangeable heads.",
-        "price": 89.99,
-        "images": [
-            "https://example.com/images/massage-gun-1.jpg",
-            "https://example.com/images/massage-gun-2.jpg"
-        ],
-        "category": "Health & Wellness",
-        "stock": 170,
-        "sku": "MG-PERC-6SPD",
-        "rating_avg": 4.7,
-        "rating_count": 480,
-        "is_active": true,
-        "tags": [
-            "massage-gun",
-            "percussion",
-            "wellness",
-            "recovery"
-        ],
-        "brand": "RelaxPro"
-    },
-    {
         "name": "Tablet Stand Adjustable",
         "slug": "tablet-stand-adjustable",
         "description": "Aluminum tablet stand with adjustable angle and anti-slip pads.",
@@ -1985,7 +468,7 @@
             "https://example.com/images/tablet-stand-1.jpg",
             "https://example.com/images/tablet-stand-2.jpg"
         ],
-        "category": "Home Office",
+        "category": "6aba26befa7aba6701721437",
         "stock": 320,
         "sku": "TS-ADJ-ALUM",
         "rating_avg": 4.5,
@@ -2000,29 +483,6 @@
         "brand": "ErgoRise"
     },
     {
-        "name": "Garden Tool Set 10 Pieces",
-        "slug": "garden-tool-set-10-pieces",
-        "description": "10-piece garden tool set with ergonomic handles and carrying case.",
-        "price": 39.99,
-        "images": [
-            "https://example.com/images/garden-tools-1.jpg",
-            "https://example.com/images/garden-tools-2.jpg"
-        ],
-        "category": "Garden & Outdoor",
-        "stock": 230,
-        "sku": "GTS-10PC-GRN",
-        "rating_avg": 4.6,
-        "rating_count": 280,
-        "is_active": true,
-        "tags": [
-            "garden",
-            "tools",
-            "outdoor",
-            "set"
-        ],
-        "brand": "GreenThumb"
-    },
-    {
         "name": "Bluetooth Tracker Key Finder",
         "slug": "bluetooth-tracker-key-finder",
         "description": "Bluetooth tracker for keys, wallet, and luggage with app tracking.",
@@ -2031,7 +491,7 @@
             "https://example.com/images/tracker-1.jpg",
             "https://example.com/images/tracker-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 510,
         "sku": "BT-TRACK-KEY",
         "rating_avg": 4.3,
@@ -2046,75 +506,6 @@
         "brand": "FindIt"
     },
     {
-        "name": "Cocktail Shaker Set",
-        "slug": "cocktail-shaker-set",
-        "description": "10-piece cocktail shaker set with strainer, jigger, and recipes.",
-        "price": 34.99,
-        "images": [
-            "https://example.com/images/cocktail-set-1.jpg",
-            "https://example.com/images/cocktail-set-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 290,
-        "sku": "CS-10PC-SS",
-        "rating_avg": 4.7,
-        "rating_count": 390,
-        "is_active": true,
-        "tags": [
-            "cocktail",
-            "shaker",
-            "bar",
-            "kitchen"
-        ],
-        "brand": "MixMaster"
-    },
-    {
-        "name": "Weighted Blanket 15lbs",
-        "slug": "weighted-blanket-15lbs",
-        "description": "15lbs weighted blanket with breathable cotton cover, 48x72 inches.",
-        "price": 69.99,
-        "images": [
-            "https://example.com/images/weighted-blanket-1.jpg",
-            "https://example.com/images/weighted-blanket-2.jpg"
-        ],
-        "category": "Home & Kitchen",
-        "stock": 160,
-        "sku": "WB-15LB-4872",
-        "rating_avg": 4.6,
-        "rating_count": 440,
-        "is_active": true,
-        "tags": [
-            "weighted-blanket",
-            "sleep",
-            "comfort",
-            "home"
-        ],
-        "brand": "DreamRest"
-    },
-    {
-        "name": "Bike Helmet Adult",
-        "slug": "bike-helmet-adult",
-        "description": "Adult bike helmet with adjustable dial, ventilation, and LED light.",
-        "price": 49.99,
-        "images": [
-            "https://example.com/images/bike-helmet-1.jpg",
-            "https://example.com/images/bike-helmet-2.jpg"
-        ],
-        "category": "Sports & Outdoors",
-        "stock": 270,
-        "sku": "BH-ADULT-LED",
-        "rating_avg": 4.5,
-        "rating_count": 320,
-        "is_active": true,
-        "tags": [
-            "bike-helmet",
-            "cycling",
-            "safety",
-            "outdoor"
-        ],
-        "brand": "RideSafe"
-    },
-    {
         "name": "Digital Photo Frame 10 inch",
         "slug": "digital-photo-frame-10-inch",
         "description": "10-inch digital photo frame with Wi-Fi, IPS display, and 16GB storage.",
@@ -2123,7 +514,7 @@
             "https://example.com/images/photo-frame-1.jpg",
             "https://example.com/images/photo-frame-2.jpg"
         ],
-        "category": "Electronics",
+        "category": "6aba28acfa7aba670172143a",
         "stock": 120,
         "sku": "DPF-10IN-WIFI",
         "rating_avg": 4.5,
@@ -2138,52 +529,6 @@
         "brand": "VisionPlus"
     },
     {
-        "name": "Hot Sauce Gift Set",
-        "slug": "hot-sauce-gift-set",
-        "description": "Set of 6 artisan hot sauces ranging from mild to extreme heat.",
-        "price": 32.99,
-        "images": [
-            "https://example.com/images/hot-sauce-1.jpg",
-            "https://example.com/images/hot-sauce-2.jpg"
-        ],
-        "category": "Food & Gourmet",
-        "stock": 340,
-        "sku": "HS-SET6-ART",
-        "rating_avg": 4.7,
-        "rating_count": 380,
-        "is_active": true,
-        "tags": [
-            "hot-sauce",
-            "gourmet",
-            "gift",
-            "food"
-        ],
-        "brand": "SpiceRoute"
-    },
-    {
-        "name": "Pet Grooming Kit",
-        "slug": "pet-grooming-kit",
-        "description": "Pet grooming kit with brush, nail clippers, and deshedding tool.",
-        "price": 29.99,
-        "images": [
-            "https://example.com/images/pet-grooming-1.jpg",
-            "https://example.com/images/pet-grooming-2.jpg"
-        ],
-        "category": "Pet Supplies",
-        "stock": 310,
-        "sku": "PGK-SET4-PET",
-        "rating_avg": 4.5,
-        "rating_count": 360,
-        "is_active": true,
-        "tags": [
-            "pet-grooming",
-            "dog",
-            "cat",
-            "supplies"
-        ],
-        "brand": "PawComfort"
-    },
-    {
         "name": "Wireless Doorbell",
         "slug": "wireless-doorbell",
         "description": "Wireless doorbell with 1000ft range, 52 chimes, and waterproof button.",
@@ -2192,7 +537,7 @@
             "https://example.com/images/doorbell-1.jpg",
             "https://example.com/images/doorbell-2.jpg"
         ],
-        "category": "Smart Home",
+        "category": "6aba286cfa7aba6701721438",
         "stock": 420,
         "sku": "WD-1000FT-52",
         "rating_avg": 4.4,

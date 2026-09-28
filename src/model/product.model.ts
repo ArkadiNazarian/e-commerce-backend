@@ -1,4 +1,4 @@
-import schema from 'mongoose';
+import mongoose,{ type HydratedDocument }  from 'mongoose';
 
 export interface Product {
     name: string;
@@ -16,9 +16,9 @@ export interface Product {
     brand: string;
 }
 
-export type ProductDocument = schema.Document<Product>;
+export type ProductDocument = HydratedDocument<Product>;
 
-const productSchema = new schema.Schema(
+const productSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -47,7 +47,7 @@ const productSchema = new schema.Schema(
             trim: true
         },
         category: {
-            type: String,
+            type: mongoose.Schema.Types.ObjectId,
             required: [true, "Category is required"],
             trim: true
         },
@@ -92,6 +92,6 @@ const productSchema = new schema.Schema(
     }
 );
 
-const Product = schema.model("Product", productSchema);
+const Product = mongoose.model("Product", productSchema);
 
 export default Product;

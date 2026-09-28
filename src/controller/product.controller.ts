@@ -104,3 +104,56 @@ export const getProductById = async (req: Request, res: Response) => {
         handleDbError(error, res)
     }
 }
+
+export const updateProduct = async (req: Request, res: Response) => {
+    try {
+        const { productId } = req.params
+
+        const product = await Product.findByIdAndUpdate(productId, { ...req.body }, { new: true, validateBeforeSave: true })
+        res.status(200).json({
+            success: true,
+            data: product
+        })
+    } catch (error) {
+        handleDbError(error, res)
+    }
+}
+
+export const productTags = async (req: Request, res: Response) => {
+    try {
+
+        const aggregate = await Product.aggregate(
+            [
+                {
+                    $unwind: "$tags"
+                },
+                {
+                    $group: {
+                        _id: "$tags",
+                        products: { $push: "$name" },
+                        count: { $sum: 1 }
+                    }
+                },
+                {
+                    $addFields: {
+                        tags: "$_id",
+                    }
+                },
+                {
+                    $project: {
+                        _id: 0,
+                    }
+                }
+
+            ]
+        )
+
+        res.status(200).json({
+            success: true,
+            data: aggregate
+        })
+
+    } catch (error) {
+        handleDbError(error, res)
+    }
+}
