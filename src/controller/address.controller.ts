@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import Address from '../model/address.model.js';
+import { handleDbError } from '../utils/dbError.js';
 
 export const addAddress = async (req: Request, res: Response) => {
     try {
@@ -30,10 +31,7 @@ export const addAddress = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 };
 
@@ -64,10 +62,7 @@ export const getUserAddresses = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 };
 
@@ -96,10 +91,7 @@ export const getAddressById = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 };
 
@@ -134,10 +126,7 @@ export const updateAddress = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 };
 
@@ -166,9 +155,6 @@ export const deleteAddress = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 };

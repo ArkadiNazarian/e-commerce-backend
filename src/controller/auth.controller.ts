@@ -3,6 +3,7 @@ import User from '../model/user.model.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import crypto from 'crypto'
+import { handleDbError } from '../utils/dbError.js'
 
 export const protectedRoute = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -39,10 +40,12 @@ export const protectedRoute = async (req: Request, res: Response, next: NextFunc
             return
         }
 
-        res.status(500).json({
-            success: false,
-            message: "Internal server error"
-        })
+        if (error instanceof jwt.JsonWebTokenError) {
+            res.status(401).json({ success: false, message: 'Token is invalid' })
+            return
+        }
+
+        handleDbError(error, res)
     }
 }
 
@@ -72,10 +75,7 @@ export const adminProtectedRoute = async (req: Request, res: Response, next: Nex
         next()
 
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: "Internal server error"
-        })
+        handleDbError(error, res)
     }
 }
 
@@ -134,11 +134,7 @@ export const signup = async (req: Request, res: Response) => {
 
 
     } catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: "Internal server error"
-        })
+        handleDbError(error, res)
     }
 
 }
@@ -192,11 +188,7 @@ export const login = async (req: Request, res: Response) => {
 
 
     } catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: "Internal server error"
-        })
+        handleDbError(error, res)
     }
 
 }
@@ -243,11 +235,7 @@ export const forgetPassword = async (req: Request, res: Response) => {
     }
 
     catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: "Internal server error"
-        })
+        handleDbError(error, res)
     }
 
 }
@@ -299,10 +287,7 @@ export const resetPassword = async (req: Request, res: Response) => {
 
     }
     catch (error) {
-        res.status(500).json({
-            success: false,
-            message: "Internal server error"
-        })
+        handleDbError(error, res)
     }
 }
 
@@ -376,9 +361,11 @@ export const refreshToken = async (req: Request, res: Response) => {
     }
     catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: "Internal server error"
-        })
+        if (error instanceof jwt.JsonWebTokenError) {
+            res.status(401).json({ success: false, message: 'Refresh token is invalid' })
+            return
+        }
+
+        handleDbError(error, res)
     }
 }

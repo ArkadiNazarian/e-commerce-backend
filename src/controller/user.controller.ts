@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import User from '../model/user.model.js';
+import { handleDbError } from '../utils/dbError.js';
 
 export const getUser = async (req: Request, res: Response) => {
     try {
@@ -15,10 +16,7 @@ export const getUser = async (req: Request, res: Response) => {
             data: user,
         });
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 };
 
@@ -49,10 +47,7 @@ export const updateUserRole = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 }
 
@@ -93,10 +88,7 @@ export const updateUserInfo = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 }
 
@@ -112,9 +104,6 @@ export const getAllUsers = async (req: Request, res: Response) => {
             data: users,
         });
     } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error',
-        });
+        return handleDbError(error, res);
     }
 };

@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express'
 import Product from '../model/product.model.js'
+import { handleDbError } from '../utils/dbError.js'
 
 export const addProduct = async (req: Request, res: Response) => {
     try {
@@ -27,11 +28,7 @@ export const addProduct = async (req: Request, res: Response) => {
         })
 
     } catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        })
+        handleDbError(error, res)
     }
 }
 
@@ -62,9 +59,48 @@ export const getProducts = async (req: Request, res: Response) => {
             data: products
         })
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: 'Internal server error'
+        handleDbError(error, res)
+    }
+}
+
+export const deleteProduct = async (req: Request, res: Response) => {
+    try {
+        const { productId } = req.params
+        const product = await Product.findByIdAndDelete(productId)
+
+        if (!product) {
+            return res.status(404).json({
+                success: false,
+                message: 'Product not found'
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Product deleted successfully'
         })
+    } catch (error) {
+        handleDbError(error, res)
+    }
+}
+
+export const getProductById = async (req: Request, res: Response) => {
+    try {
+        const { productId } = req.params
+        const product = await Product.findById(productId)
+
+        if (!product) {
+            return res.status(404).json({
+                success: false,
+                message: 'Product not found'
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            data: product
+        })
+    } catch (error) {
+        handleDbError(error, res)
     }
 }

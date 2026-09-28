@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express'
 import Category from '../model/category.model.js'
+import { handleDbError } from '../utils/dbError.js'
 
 export const addCategory = async (req: Request, res: Response) => {
     try {
@@ -19,11 +20,7 @@ export const addCategory = async (req: Request, res: Response) => {
         })
 
     } catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        })
+        handleDbError(error, res)
     }
 }
 
@@ -46,11 +43,7 @@ export const getCategory = async (req: Request, res: Response) => {
             data: category
         })
     } catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        })
+        handleDbError(error, res)
     }
 }
 
@@ -73,11 +66,7 @@ export const getCategoryById = async (req: Request, res: Response) => {
             data: category
         })
     } catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        })
+        handleDbError(error, res)
     }
 }
 
@@ -90,10 +79,7 @@ export const updateCategory = async (req: Request, res: Response) => {
             data: category
         })
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        })
+        handleDbError(error, res)
     }
 }
 
@@ -125,9 +111,6 @@ export const deleteCategoryById = async (req: Request, res: Response) => {
             data: category
         })
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        })
+        handleDbError(error, res)
     }
 }
