@@ -9,6 +9,7 @@ import userRoute from "./route/user.route.js";
 import addressRoute from "./route/address.route.js";
 import categoryRoute from "./route/category.route.js";
 import productRoute from "./route/product.route.js";
+import cartRoute from "./route/cart.route.js";
 
 export const app = express();
 
@@ -33,6 +34,7 @@ app.use('/api/v1/user/', userRoute)
 app.use('/api/v1/address/', addressRoute)
 app.use('/api/v1/category/', categoryRoute)
 app.use('/api/v1/product/', productRoute)
+app.use('/api/v1/cart/', cartRoute)
 
 
 app.all('/*splat', (req, res, next) => {
