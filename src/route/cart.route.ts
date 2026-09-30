@@ -7,6 +7,6 @@ const cartRoute = Router()
 cartRoute.route('/add').post(protectedRoute, addToCart)
 cartRoute.route('/get').get(protectedRoute, getCart)
 cartRoute.route('/delete').delete(protectedRoute, deleteCart)
-cartRoute.route('/:productId/remove-item').delete(protectedRoute, removeItemFromCart)
+cartRoute.route('/remove-item').patch(protectedRoute, removeItemFromCart)
 
 export default cartRoute

@@ -91,7 +91,7 @@ export const addToCart = async (req: Request, res: Response) => {
                 })
             } else {
 
-                if (quantity < 0) {
+                if (quantity < 1) {
                     res.status(400).json({
                         success: false,
                         message: 'Quantity must be greater than 0'
@@ -169,7 +169,7 @@ export const deleteCart = async (req: Request, res: Response) => {
 
 export const removeItemFromCart = async (req: Request, res: Response) => {
     try {
-        const { productId } = req.params
+        const { product } = req.body
 
         if (!req.user) {
             return res.status(401).json({
@@ -189,7 +189,7 @@ export const removeItemFromCart = async (req: Request, res: Response) => {
 
         let items = cart.items
 
-        const isProductInCart = items.find(item => item.product?.toString() === productId)
+        const isProductInCart = items.find(item => item.product?.toString() === product)
 
         if (!isProductInCart) {
             return res.status(404).json({
@@ -198,16 +198,14 @@ export const removeItemFromCart = async (req: Request, res: Response) => {
             })
         }
 
-        const itemIndex = items.filter(item => item.product?.toString() !== productId)
+        const itemIndex = items.filter(item => item.product?.toString() !== product)
 
         if (itemIndex.length === 0) {
             deleteCart(req, res)
             return
         }
 
-        items = itemIndex as typeof cart.items
-
-        const updatedCart = await Cart.findByIdAndUpdate(cart._id, { items }, { new: true, validateBeforeSave: true })
+        const updatedCart = await Cart.findByIdAndUpdate(cart._id, { $pull: { items: { product: product } } }, { new: true, validateBeforeSave: true })
 
         res.status(200).json({
             success: true,
