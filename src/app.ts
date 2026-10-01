@@ -11,6 +11,7 @@ import categoryRoute from "./route/category.route.js";
 import productRoute from "./route/product.route.js";
 import cartRoute from "./route/cart.route.js";
 import wishlistRoute from "./route/wishlist.route.js";
+import checkoutRoute from "./route/checkout.route.js";
 
 export const app = express();
 
@@ -37,6 +38,7 @@ app.use('/api/v1/category/', categoryRoute)
 app.use('/api/v1/product/', productRoute)
 app.use('/api/v1/cart/', cartRoute)
 app.use('/api/v1/wishlist/', wishlistRoute)
+app.use('/api/v1/checkout/', checkoutRoute)
 
 
 app.all('/*splat', (req, res, next) => {
