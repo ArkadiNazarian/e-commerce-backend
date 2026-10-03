@@ -25,12 +25,6 @@ export const createOrder = async (req: Request, res: Response) => {
 
         const isOrderExist = await Order.findOne({ user: req.user._id })
 
-        if (isOrderExist) {
-            return res.status(400).json({
-                success: false,
-                message: 'Order already exist'
-            })
-        }
 
         const orderItems = await Promise.all(
             getCart.items.map(async (item: any) => {
@@ -50,6 +44,24 @@ export const createOrder = async (req: Request, res: Response) => {
             })
         )
 
+        if (isOrderExist) {
+
+            const updatedOrder = await Order.findByIdAndUpdate(isOrderExist._id, {
+                items: orderItems,
+                total_price: orderItems.reduce((acc, item) => acc + item.total_price, 0),
+                status: OrderStatus.PENDING
+            }, { new: true})
+
+            res.status(200).json({
+                success: true,
+                data: updatedOrder
+            })
+
+            return
+
+        }
+
+
         const order = await Order.create({
             order_number: `ORD_${Date.now()}_${Math.floor(Math.random() * 10000)}`,
             user: req.user._id,
@@ -66,3 +78,4 @@ export const createOrder = async (req: Request, res: Response) => {
         handleDbError(error, res)
     }
 }
+
