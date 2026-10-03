@@ -50,3 +50,31 @@ export const getOrder = async (req: Request, res: Response) => {
         handleDbError(error, res)
     }
 }
+
+export const deleteOrder = async (req: Request, res: Response) => {
+    try {
+
+        if (!req.user) {
+            return res.status(401).json({
+                success: false,
+                message: 'User not found'
+            })
+        }
+
+        const order = await Order.findByIdAndDelete(req.params.orderId)
+
+        if (!order) {
+            return res.status(404).json({
+                success: false,
+                message: 'Order not found'
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            data: null
+        })
+    } catch (error) {
+        handleDbError(error, res)
+    }
+}
