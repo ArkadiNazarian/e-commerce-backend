@@ -3,6 +3,7 @@ import Order, { OrderStatus } from '../model/order.model.js'
 import { handleDbError } from '../utils/dbError.js'
 import Product from '../model/product.model.js'
 import Cart from '../model/cart.model.js'
+import Address from '../model/address.model.js'
 
 export const createOrder = async (req: Request, res: Response) => {
     try {
@@ -52,12 +53,12 @@ export const createOrder = async (req: Request, res: Response) => {
                 status: OrderStatus.PENDING
             }, { new: true})
 
-            res.status(200).json({
+           return res.status(200).json({
                 success: true,
                 data: updatedOrder
             })
 
-            return
+            
 
         }
 
@@ -71,6 +72,51 @@ export const createOrder = async (req: Request, res: Response) => {
         })
 
         res.status(201).json({
+            success: true,
+            data: order
+        })
+    } catch (error) {
+        handleDbError(error, res)
+    }
+}
+
+export const selectShippingAddress = async (req: Request, res: Response) => {
+    try {
+        if (!req.user) {
+            return res.status(401).json({
+                success: false,
+                message: 'User not found'
+            })
+        }
+
+        if(!req.body.addressId){
+            return res.status(400).json({
+                success: false,
+                message: 'Address id is required'
+            })
+        }
+
+        const isAddressExist = await Address.findById(req.body.addressId)
+
+        if(!isAddressExist){
+            return res.status(404).json({
+                success: false,
+                message: 'Address not found'
+            })
+        }
+
+        const order = await Order.findOneAndUpdate({ user: req.user._id },{
+            shipping_address: req.body.shipping_address,
+            shipping_price:20,
+        })
+        if (!order) {
+            return res.status(404).json({
+                success: false,
+                message: 'Order not found'
+            })
+        }
+
+        res.status(200).json({
             success: true,
             data: order
         })
