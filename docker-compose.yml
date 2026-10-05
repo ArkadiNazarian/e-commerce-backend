@@ -1,0 +1,61 @@
+services:
+  # ---------------- Redis ----------------
+  redis:
+    image: redis:latest
+    container_name: my-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - my-app-network
+
+  # ---------------- MongoDB ----------------
+  mongo:
+    image: mongo:7
+    container_name: my-mongo
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - my-app-network
+
+  # ---------------- Node.js app ----------------
+  node-app:
+    build: .
+    container_name: my-node-server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - REDIS_URL=redis://redis:6379
+      - MONGODB_URI=mongodb://mongo:27017/ecommerce
+      - SECRET_KEY=${SECRET_KEY}              # <-- pulled from .env
+      - REFRESH_TOKEN=${REFRESH_TOKEN}        # <-- pulled from .env
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+    networks:
+      - my-app-network
+
+networks:
+  my-app-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+  mongo-data:
