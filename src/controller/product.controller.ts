@@ -1,6 +1,7 @@
 import type { Request, Response } from 'express'
 import Product from '../model/product.model.js'
 import { handleDbError } from '../utils/dbError.js'
+import { redis } from '../server.js'
 
 export const addProduct = async (req: Request, res: Response) => {
     try {
@@ -51,7 +52,23 @@ export const getProducts = async (req: Request, res: Response) => {
             sortOptions = sortBy
         }
 
+        const cachedProducts = await redis.get('products')
+        if (cachedProducts) {
+            return res.status(200).json({
+                success: true,
+                data: JSON.parse(cachedProducts)
+            })
+        }
+
         const products = await Product.find(queries).sort(sortOptions).skip((Number(page) - 1) * Number(limit)).limit(Number(limit))
+
+        const setProductsCache = await redis.set('products', JSON.stringify(products), { EX: 60 })
+        if (!setProductsCache) {
+            return res.status(500).json({
+                success: false,
+                message: 'Error setting cache'
+            })
+        }
 
         res.status(200).json({
             success: true,
@@ -87,12 +104,31 @@ export const deleteProduct = async (req: Request, res: Response) => {
 export const getProductById = async (req: Request, res: Response) => {
     try {
         const { productId } = req.params
+
+
+        const getCacheProduct = await redis.get(`product_${productId}`)
+        if (getCacheProduct) {
+            return res.status(200).json({
+                success: true,
+                data: JSON.parse(getCacheProduct)
+            })
+        }
+
         const product = await Product.findById(productId)
 
         if (!product) {
             return res.status(404).json({
                 success: false,
                 message: 'Product not found'
+            })
+        }
+
+        const setProductCache = await redis.set(`product:${productId}`, JSON.stringify(product), { EX: 60 })
+
+        if (!setProductCache) {
+            return res.status(500).json({
+                success: false,
+                message: 'Error setting cache'
             })
         }
 

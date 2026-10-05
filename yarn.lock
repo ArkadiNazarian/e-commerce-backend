@@ -139,6 +139,31 @@
   dependencies:
     sparse-bitfield "^3.0.3"
 
+"@redis/bloom@6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@redis/bloom/-/bloom-6.3.0.tgz#5d6fe38f4f937c5a629c6bc5b6dafdbe9a07b433"
+  integrity sha512-NQ5poYpZr0jv6zazN1cy6JY5kIipKFZ3R9GTL4kOUTX3a9YAfY29U8bsE4lWhVQEM+G4V0BXVC57mubIdDijeA==
+
+"@redis/client@6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@redis/client/-/client-6.3.0.tgz#b8501b8d39eb1d4d9d2d1c6bd75cf441bea259b2"
+  integrity sha512-fHrjwGCBvAANGi+TuRuwKi83sIOzgHr8eh+Uf48w3fSX7Hhrz174NrWqfJhAC2vnN0d/tfaZpdr6+o6JC3QHwg==
+
+"@redis/json@6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@redis/json/-/json-6.3.0.tgz#e2d928f6785eb57bb721a9764057dcef69aeb1af"
+  integrity sha512-yt6vRfPBXtW/3qm53cF81TSQpLMjWdW4/2E9WQ2GgbvsKkuCKCFQIcMiKlil1ZMnezK+IQuS795xKU5psbaegw==
+
+"@redis/search@6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@redis/search/-/search-6.3.0.tgz#c153c125d0f791af78c145299f8ba4f7fc0eb0f8"
+  integrity sha512-RPXAZmKjZZG7Tm7m1w9keFdXzbL91PiSHQBfQRe9xwW40jNsTRbG0FwhIz4QlHPU4gKDAsCy8IQHj4yZl4H9rw==
+
+"@redis/time-series@6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@redis/time-series/-/time-series-6.3.0.tgz#d21c1113ec607e0de5329f5bb799688e4e8cb940"
+  integrity sha512-+fJOB8mN1z5WRakCJNh5lVdz1KqvHGSOistsKeitD24QsCtPwyRQXWC0iq6T/i/ubLE/YcguZqPm8F598MKk4A==
+
 "@standard-schema/spec@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@standard-schema/spec/-/spec-1.1.0.tgz#a79b55dbaf8604812f52d140b2c9ab41bc150bb8"
@@ -1110,6 +1135,17 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+redis@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/redis/-/redis-6.3.0.tgz#1509c3e7bbb41baa0f69247c0ff7a0fea2b0f91b"
+  integrity sha512-XFQbPie1lGpKeUZ8ySYY43yLnQy/iIQtHNvIr/1XdaABpb96rUSdm3Mfl+98FEVbv9ZJIzINMno5s0Nh8E5LEw==
+  dependencies:
+    "@redis/bloom" "6.3.0"
+    "@redis/client" "6.3.0"
+    "@redis/json" "6.3.0"
+    "@redis/search" "6.3.0"
+    "@redis/time-series" "6.3.0"
 
 router@^2.2.0:
   version "2.2.0"
