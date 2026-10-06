@@ -4,6 +4,7 @@ import { OpenRouter } from "@openrouter/sdk";
 
 import Product from "../model/product.model.js";
 import { redis } from "../server.js";
+import type { ICategory } from "../model/category.model.js";
 
 const openrouter = new OpenRouter({
     apiKey: process.env.OPENROUTER_API_KEY,
@@ -59,7 +60,7 @@ const cronRedis = cron.schedule("* * * * *", async () => {
             const categoryName =
                 typeof product.category === "object" &&
                     product.category !== null
-                    ? (product.category as any).name ?? ""
+                    ? (product.category as unknown as ICategory).name ?? ""
                     : "";
 
             const embeddingText = `
