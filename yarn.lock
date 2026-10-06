@@ -139,6 +139,13 @@
   dependencies:
     sparse-bitfield "^3.0.3"
 
+"@openrouter/sdk@^1.4.22":
+  version "1.4.22"
+  resolved "https://registry.yarnpkg.com/@openrouter/sdk/-/sdk-1.4.22.tgz#10db7e5e6bc9a24ca688dfa71c8f422c5ac11135"
+  integrity sha512-8IPn9VCf2K+qpMtQMuLOJrcdEF38bLG26Qjo9DqPYPtv1C+Sfv+BRGg4OPjNmgXgmFeD2Six6akasgsY7nka0g==
+  dependencies:
+    zod "^3.25.0 || ^4.0.0"
+
 "@redis/bloom@6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@redis/bloom/-/bloom-6.3.0.tgz#5d6fe38f4f937c5a629c6bc5b6dafdbe9a07b433"
@@ -1396,3 +1403,8 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
+
+"zod@^3.25.0 || ^4.0.0":
+  version "4.6.5"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-4.6.5.tgz#e3af3edbdc260239c52f73caad05dbbffe6e82cd"
+  integrity sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==

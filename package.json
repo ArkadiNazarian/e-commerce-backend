@@ -5,6 +5,7 @@
   "author": "ArkadiNazarian",
   "license": "MIT",
   "dependencies": {
+    "@openrouter/sdk": "^1.4.22",
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",
     "dotenv": "^18.0.3",
