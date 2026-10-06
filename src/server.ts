@@ -2,7 +2,7 @@ import 'dotenv/config.js'
 import { app } from './app.js'
 import mongoose from 'mongoose'
 import { createClient } from 'redis'
-
+import cronRedis from './jobs/product-redis.js'
 
 export const redis = createClient({
   url: process.env.REDIS_URL || 'redis://localhost:6379'
