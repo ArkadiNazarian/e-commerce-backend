@@ -2,7 +2,8 @@ import 'dotenv/config.js'
 import { app } from './app.js'
 import mongoose from 'mongoose'
 import { createClient } from 'redis'
-import cronRedis from './jobs/product-job.js'
+import cronRedis from './cron/productRedis.cron.js'
+import { createProductVectorIndex } from './redis/productVectorIndex.js'
 
 export const redis = createClient({
   url: process.env.REDIS_URL || 'redis://localhost:6379'
@@ -16,6 +17,8 @@ redis.on('error', (err) => {
 redis.connect()
   .then(() => console.log('Redis connected'))
   .catch((err) => console.error('Redis error:', err))
+
+await createProductVectorIndex()
 
 
 mongoose.connect(process.env.MONGODB_URI!).then((connection) => {
