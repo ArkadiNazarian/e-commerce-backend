@@ -13,6 +13,7 @@ import cartRoute from "./route/cart.route.js";
 import wishlistRoute from "./route/wishlist.route.js";
 import checkoutRoute from "./route/checkout.route.js";
 import orderRoute from "./route/order.route.js";
+import botRoute from "./route/bot.route.js";
 
 export const app = express();
 
@@ -41,6 +42,7 @@ app.use('/api/v1/cart/', cartRoute)
 app.use('/api/v1/wishlist/', wishlistRoute)
 app.use('/api/v1/checkout/', checkoutRoute)
 app.use('/api/v1/order/', orderRoute)
+app.use('/api/v1/bot/',botRoute)
 
 
 app.all('/*splat', (req, res, next) => {
